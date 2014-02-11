@@ -1,4 +1,4 @@
 DropKick
 ========
 
-Super Simple S3 file uploader for node-webkit
+Super simple Amazon S3 file uploader built fo node-webkit.
