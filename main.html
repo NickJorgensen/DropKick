@@ -27,8 +27,8 @@
 			var path = require('path');
 			var cwd = path.normalize(process.execPath)
 			var APP_ROOT
-			if(platform == 'win32')APP_ROOT = cwd.split('dk.exe')[0]
-			if(platform == 'darwin')APP_ROOT = cwd.split('dk.app')[0]
+			if(platform == 'win32')APP_ROOT = cwd.split('DropKick.exe')[0]
+			if(platform == 'darwin')APP_ROOT = cwd.split('DropKick.app')[0]
 			APP_ROOT = path.normalize(APP_ROOT)
 			//
 			//__dirname does not work in Node-webkit
