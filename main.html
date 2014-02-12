@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Default</title>
+		<title>DropKick</title>
 		<script type="text/javascript" charset="utf-8" src="./public/js/jquery-1.10.2.js"></script>
 		<script type="text/javascript" charset="utf-8" src="./public/js/start.js"></script>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />	
 		<style>
 			html,body{
 			}
@@ -26,13 +24,10 @@
 			var platform = process.platform
 			var path = require('path');
 			var cwd = path.normalize(process.execPath)
-			var APP_ROOT
-			if(platform == 'win32')APP_ROOT = cwd.split('DropKick.exe')[0]
-			if(platform == 'darwin')APP_ROOT = cwd.split('DropKick.app')[0]
-			APP_ROOT = path.normalize(APP_ROOT)
 			//
 			//__dirname does not work in Node-webkit
 			//
+			var APP_ROOT = path.dirname(cwd)
 			gui = require('nw.gui')
 			
 			//
@@ -40,9 +35,8 @@
 			$.getScript(APP_ROOT+'/web.js', function() {
 			})
 		</script>
-		
 	</head>
-	<body style="margin:0;">
+	<body>
 		<div id="helloDisplay">
 		</div>
 		<div id="fileButtons">
